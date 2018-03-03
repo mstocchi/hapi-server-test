@@ -1,0 +1,19 @@
+# Created by https://www.gitignore.io
+
+### Node ###
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+.grunt
+
+
+# Dependency directory
+node_modules
+
+# Users Environment Variables
+.lock-wscript
