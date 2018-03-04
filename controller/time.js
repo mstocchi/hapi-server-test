@@ -1,7 +1,7 @@
+const timeService = require('../service/time');
 
 const getCurrentTime = async (request, h) => {
-  let d = new Date();
-  return {time: d.toISOString()};
+  return timeService.getCurrentTime();
 };
 
 module.exports = {

@@ -4,7 +4,7 @@ module.exports = [
   {
     method: 'GET',
     path: '/time',
-    config: {
+    options: {
       handler: controller.getTime,
       description: 'Return current time on server',
       notes: 'Return in date time format',

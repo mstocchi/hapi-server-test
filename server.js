@@ -5,13 +5,13 @@ const Inert = require('inert');
 const Vision = require('vision');
 const Pack = require('./package');
 
+const server = new Hapi.Server({
+  host: '0.0.0.0',
+  port: 3000
+});
+
 const main = async () => {
   console.log('Starting server...');
-
-  const server = new Hapi.Server({
-    host: '0.0.0.0',
-    port: 3000
-  });
 
   console.log('Registering plugins...');
   await server.register(
@@ -38,4 +38,15 @@ const main = async () => {
   }
 };
 
+process.on('SIGINT', function () {
+  console.log('stopping hapi server');
+
+  server.stop({ timeout: 10000 }).then(function (err) {
+    console.log('hapi server stopped');
+    process.exit((err) ? 1 : 0);
+  });
+});
+
 main();
+
+module.exports = server;

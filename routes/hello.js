@@ -2,7 +2,7 @@ module.exports = [
   {
     method: 'GET',
     path: '/hello',
-    config: {
+    options: {
       handler: function (request, h) {
         return 'Hello World!';
       },
