@@ -1,6 +1,6 @@
 'use strict';
 
-var Hapi = require('hapi');
+const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const Pack = require('./package');

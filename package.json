@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "lint": "eslint src/**",
-    "test": "jest src",
-    "coverage": "jest --collectCoverageFrom=src/**.js --coverage"
+    "test": "jest test",
+    "coverage": "jest --collectCoverageFrom=test/**.js --coverage"
   },
   "author": "",
   "license": "ISC",

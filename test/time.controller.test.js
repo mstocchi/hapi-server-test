@@ -10,7 +10,7 @@ describe('time controller', () => {
     process.exit(0);
   }); */
 
-  test('responds with success om request', async (done) => {
+  test('responds with success on request', async (done) => {
     const response = await Server.inject({
       method: 'GET',
       url: '/time'
@@ -20,7 +20,7 @@ describe('time controller', () => {
     done();
   });
 
-  test('mocking controller', async (done) => {
+  test('mocking timeService on controller', async (done) => {
     const returnValue = {'time': '0000-00-00000:00:00.0000'};
 
     const getTime = jest.fn();
